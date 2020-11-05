@@ -10,4 +10,13 @@ void main() {
     expect(calculator.addOne(0), 1);
     expect(() => calculator.addOne(null), throwsNoSuchMethodError);
   });
+
+  test('String is blank', () {
+    expect(StringUtil.isBlank(''), true);
+    expect(StringUtil.isBlank(' '), true);
+    expect(StringUtil.isBlank('         '), true);
+    expect(StringUtil.isBlank(null), true);
+    expect(StringUtil.isBlank('1'), false);
+    expect(StringUtil.isBlank(' 1 '), false);
+  });
 }
