@@ -2,7 +2,15 @@ import 'package:flutter_test/flutter_test.dart';
 
 import 'package:flutool_core/flutool_core.dart';
 
+void main() {
+  strUtilTest();
+}
+
 void strUtilTest() {
+  removeSuffix();
+
+  removePrefix();
+
   strHasEmpty();
 
   strIsInt();
@@ -10,6 +18,64 @@ void strUtilTest() {
   strHasBlank();
 
   strIsBlank();
+}
+
+/// 测试[StrUtil.removeSuffix]
+void removeSuffix() {
+  test('Remove string suffix', () {
+    expect(StrUtil.removeSuffix('HelloWorld!', '!'), 'HelloWorld');
+    expect(StrUtil.removeSuffix('HelloWorld', 'World'), 'Hello');
+    expect(StrUtil.removeSuffix('HelloHello', 'Hello'), 'Hello');
+    expect(StrUtil.removeSuffix('HelloHelloHello', 'Hello'), 'HelloHello');
+    expect(StrUtil.removeSuffix('HelloWorld', 'HelloWorld'), '');
+    expect(StrUtil.removeSuffix('HelloWorld', ''), 'HelloWorld');
+    expect(StrUtil.removeSuffix('HelloWorld', 'abc'), 'HelloWorld');
+    expect(StrUtil.removeSuffix(' ', ' '), '');
+    expect(StrUtil.removeSuffix(' ', '  '), ' ');
+    expect(StrUtil.removeSuffix('    ', ' '), '   ');
+    expect(() => StrUtil.removeSuffix('    ', null), throwsNoSuchMethodError);
+    expect(() => StrUtil.removeSuffix(null, ' '), throwsNoSuchMethodError);
+
+    expect('HelloWorld!'.removeSuffix('!'), 'HelloWorld');
+    expect('HelloWorld'.removeSuffix('World'), 'Hello');
+    expect('HelloHello'.removeSuffix('Hello'), 'Hello');
+    expect('HelloHelloHello'.removeSuffix('Hello'), 'HelloHello');
+    expect('HelloWorld'.removeSuffix('HelloWorld'), '');
+    expect('HelloWorld'.removeSuffix(''), 'HelloWorld');
+    expect('HelloWorld'.removeSuffix('abc'), 'HelloWorld');
+    expect(' '.removeSuffix(' '), '');
+    expect(' '.removeSuffix('  '), ' ');
+    expect('    '.removeSuffix(' '), '   ');
+    expect(() => '    '.removeSuffix(null), throwsNoSuchMethodError);
+    expect(() => null.removeSuffix(' '), throwsNoSuchMethodError);
+  });
+}
+
+/// 测试[StrUtil.removePrefix]
+void removePrefix() {
+  test('Remove string prefix', () {
+    expect(StrUtil.removePrefix('HelloWorld', 'Hello'), 'World');
+    expect(StrUtil.removePrefix('HelloHello', 'Hello'), 'Hello');
+    expect(StrUtil.removePrefix('HelloWorld', 'HelloWorld'), '');
+    expect(StrUtil.removePrefix('HelloWorld', ''), 'HelloWorld');
+    expect(StrUtil.removePrefix('HelloWorld', 'abc'), 'HelloWorld');
+    expect(StrUtil.removePrefix(' ', ' '), '');
+    expect(StrUtil.removePrefix(' ', '  '), ' ');
+    expect(StrUtil.removePrefix('    ', ' '), '   ');
+    expect(() => StrUtil.removePrefix('    ', null), throwsNoSuchMethodError);
+    expect(() => StrUtil.removePrefix(null, ' '), throwsNoSuchMethodError);
+
+    expect('HelloWorld'.removePrefix('Hello'), 'World');
+    expect('HelloHello'.removePrefix('Hello'), 'Hello');
+    expect('HelloWorld'.removePrefix('HelloWorld'), '');
+    expect('HelloWorld'.removePrefix(''), 'HelloWorld');
+    expect('HelloWorld'.removePrefix('abc'), 'HelloWorld');
+    expect(' '.removePrefix(' '), '');
+    expect(' '.removePrefix('  '), ' ');
+    expect('    '.removePrefix(' '), '   ');
+    expect(() => '    '.removePrefix(null), throwsNoSuchMethodError);
+    expect(() => null.removePrefix(' '), throwsNoSuchMethodError);
+  });
 }
 
 /// 测试[StrUtil.hasEmpty]

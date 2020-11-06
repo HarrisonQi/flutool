@@ -50,4 +50,28 @@ class StrUtil {
     }
     return true;
   }
+
+  /// Remove [prefix] of [text].
+  /// 移除字符串 [text] 的前缀 [prefix]
+  static String removePrefix(String text, String prefix) {
+    if (text.isEmpty || prefix.isEmpty) {
+      return text;
+    }
+    return text.replaceFirst(prefix, '');
+  }
+
+  /// Remove [suffix] of [text]
+  /// 移除字符串 [text] 的后缀 [suffix]
+  static String removeSuffix(String text, String suffix) {
+    if (text.isEmpty || suffix.isEmpty) {
+      return text;
+    }
+    // 获取后缀下标
+    var lastIndex = text.lastIndexOf(suffix);
+    if (lastIndex == -1) {
+      // 当未找到后缀时, 直接返回
+      return text;
+    }
+    return text.replaceFirst(suffix, '', lastIndex);
+  }
 }
