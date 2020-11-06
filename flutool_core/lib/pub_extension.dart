@@ -12,4 +12,7 @@ extension StringExtension on String {
 
   /// 移除字符串的指定后缀 [suffix]
   String removeSuffix(String suffix) => StrUtil.removeSuffix(this, suffix);
+
+  /// 字符串转为DateTime
+  DateTime get toDateTime => StrUtil.toDateTime(this);
 }

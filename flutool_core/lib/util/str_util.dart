@@ -74,4 +74,10 @@ class StrUtil {
     }
     return text.replaceFirst(suffix, '', lastIndex);
   }
+
+  /// Parse text to DateTime
+  /// 将字符串 [text] 转为 DateTime
+  static DateTime toDateTime(String text, {String formatString}){
+    return DateTime.parse(text);
+  }
 }

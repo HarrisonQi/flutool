@@ -7,6 +7,8 @@ void main() {
 }
 
 void strUtilTest() {
+  toDateTime();
+
   removeSuffix();
 
   removePrefix();
@@ -18,6 +20,27 @@ void strUtilTest() {
   strHasBlank();
 
   strIsBlank();
+}
+
+/// 测试 [StrUtil.toDateTime]
+void toDateTime() {
+  test('String to DateTime', () {
+    expect(StrUtil.toDateTime('2020-05-21'), DateTime(2020, 5, 21));
+    expect(StrUtil.toDateTime('2020-05-21 01:03'), DateTime(2020, 5, 21, 1, 3));
+    expect(StrUtil.toDateTime('2020-05-21 01:03:40'),
+        DateTime(2020, 5, 21, 1, 3, 40));
+    expect(StrUtil.toDateTime('2020-13-21 01:03:40'),
+        DateTime(2021, 1, 21, 1, 3, 40));
+    expect(() => StrUtil.toDateTime('abc'), throwsFormatException);
+    expect(() => StrUtil.toDateTime(''), throwsFormatException);
+
+    expect('2020-05-21'.toDateTime, DateTime(2020, 5, 21));
+    expect('2020-05-21 01:03'.toDateTime, DateTime(2020, 5, 21, 1, 3));
+    expect('2020-05-21 01:03:40'.toDateTime, DateTime(2020, 5, 21, 1, 3, 40));
+    expect('2020-13-21 01:03:40'.toDateTime, DateTime(2021, 1, 21, 1, 3, 40));
+    expect(() => 'abc'.toDateTime, throwsFormatException);
+    expect(() => ''.toDateTime, throwsFormatException);
+  });
 }
 
 /// 测试[StrUtil.removeSuffix]
