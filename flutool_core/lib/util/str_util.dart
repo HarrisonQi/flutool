@@ -75,9 +75,14 @@ class StrUtil {
     return text.replaceFirst(suffix, '', lastIndex);
   }
 
-  /// Parse text to DateTime
-  /// 将字符串 [text] 转为 DateTime
-  static DateTime toDateTime(String text, {String formatString}){
+  /// Parse text to DateTime. Support [YYYY-MM-DD hh:mm:ss] or timestamp millisecond
+  /// 将字符串 [text] 转为 DateTime. 支持: [YYYY-MM-DD hh:mm:ss] 及 时间戳毫秒数
+  static DateTime toDateTime(String text){
+    // 判断是否为时间戳格式
+    if(isInt(text)){
+      return DateTime.fromMillisecondsSinceEpoch(int.parse(text));
+    }
+
     return DateTime.parse(text);
   }
 }

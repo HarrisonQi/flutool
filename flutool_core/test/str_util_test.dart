@@ -40,6 +40,8 @@ void toDateTime() {
     expect('2020-13-21 01:03:40'.toDateTime, DateTime(2021, 1, 21, 1, 3, 40));
     expect(() => 'abc'.toDateTime, throwsFormatException);
     expect(() => ''.toDateTime, throwsFormatException);
+    expect('1604657939000'.toDateTime, DateTime(2020,11,6,18,18,59));
+    expect('-1000'.toDateTime, DateTime(1969,12,31,23,59,59));
   });
 }
 
