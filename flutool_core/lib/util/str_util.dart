@@ -1,3 +1,4 @@
+/// 字符串工具类
 class StrUtil {
   /// Check [textList] contains empty string or not. (just like several times of [String.isEmpty])
   /// 判断 [textList] 中, 是否包含空字符([String.isEmpty]的批量处理版)
