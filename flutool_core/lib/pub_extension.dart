@@ -20,7 +20,6 @@ extension StringExtension on String {
 }
 
 extension IntegerExtension on int {
-  bool get a => true;
 
   /// 判断数字是否在[start]~[end]范围内
   bool isBetween(start, end) => NumberUtil.isBetween(this, start, end);
