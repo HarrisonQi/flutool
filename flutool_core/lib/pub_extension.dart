@@ -1,3 +1,4 @@
+import 'package:flutool_core/util/number_util.dart';
 import 'package:flutool_core/util/str_util.dart';
 
 extension StringExtension on String {
@@ -15,4 +16,15 @@ extension StringExtension on String {
 
   /// 字符串转为DateTime
   DateTime get toDateTime => StrUtil.toDateTime(this);
+}
+
+extension IntegerExtension on int {
+  bool get a => true;
+  /// 判断数字是否在[start]~[end]范围内
+  bool isBetween(start, end) => NumberUtil.isBetween(this, start, end);
+}
+
+extension DoubleExtension on double {
+  /// 判断数字是否在[start]~[end]范围内
+  bool isBetween(start, end) => NumberUtil.isBetween(this, start, end);
 }
