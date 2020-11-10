@@ -1,4 +1,5 @@
 import 'package:flutool_core/util/number_util.dart';
+import 'package:flutool_core/util/random_util.dart';
 import 'package:flutool_core/util/str_util.dart';
 
 extension StringExtension on String {
@@ -20,6 +21,7 @@ extension StringExtension on String {
 
 extension IntegerExtension on int {
   bool get a => true;
+
   /// 判断数字是否在[start]~[end]范围内
   bool isBetween(start, end) => NumberUtil.isBetween(this, start, end);
 }
@@ -27,4 +29,9 @@ extension IntegerExtension on int {
 extension DoubleExtension on double {
   /// 判断数字是否在[start]~[end]范围内
   bool isBetween(start, end) => NumberUtil.isBetween(this, start, end);
+}
+
+extension ListExtension on List{
+  /// 获取集合中随机一个元素
+  dynamic get randomEle => RandomUtil.randomEle(this);
 }
