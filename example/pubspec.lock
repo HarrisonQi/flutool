@@ -67,9 +67,9 @@ packages:
   flutool_core:
     dependency: transitive
     description:
-      path: "../flutool_core"
-      relative: true
-    source: path
+      name: flutool_core
+      url: "https://pub.flutter-io.cn"
+    source: hosted
     version: "0.0.1-alpha.1"
   flutter:
     dependency: "direct main"

@@ -12,8 +12,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  flutool_core:
-    path: flutool_core
+  flutool_core: ^0.0.1-alpha.1
 
 dev_dependencies:
   flutter_test:

@@ -20,7 +20,6 @@ extension StringExtension on String {
 }
 
 extension IntegerExtension on int {
-
   /// 判断数字是否在[start]~[end]范围内
   bool isBetween(start, end) => NumberUtil.isBetween(this, start, end);
 }
@@ -30,7 +29,7 @@ extension DoubleExtension on double {
   bool isBetween(start, end) => NumberUtil.isBetween(this, start, end);
 }
 
-extension ListExtension on List{
+extension ListExtension on List {
   /// 获取集合中随机一个元素
   dynamic get randomEle => RandomUtil.randomEle(this);
 }
