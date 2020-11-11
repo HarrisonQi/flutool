@@ -1,8 +1,8 @@
 name: flutool
 description: A set of tools that keep dart/flutter sweet.
-version: 0.0.1
-author:
-homepage:
+version: 0.0.1-alpha.1
+homepage: https://github.com/HarrisonQi/flutool
+issue_tracker: https://github.com/HarrisonQi/flutool/issues
 
 environment:
   sdk: ">=2.7.0 <3.0.0"
