@@ -78,9 +78,9 @@ class StrUtil {
 
   /// Parse text to DateTime. Support [YYYY-MM-DD hh:mm:ss] or timestamp millisecond
   /// 将字符串 [text] 转为 DateTime. 支持: [YYYY-MM-DD hh:mm:ss] 及 时间戳毫秒数
-  static DateTime toDateTime(String text){
+  static DateTime toDateTime(String text) {
     // 判断是否为时间戳格式
-    if(isInt(text)){
+    if (isInt(text)) {
       return DateTime.fromMillisecondsSinceEpoch(int.parse(text));
     }
 

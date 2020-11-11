@@ -8,9 +8,24 @@ void main() {
 }
 
 void randomUtilTest() {
+  randomIntListTest();
+
   randomEleTest();
 
   randomIntTest();
+}
+
+/// 测试[RandomUtil.randomIntList]
+void randomIntListTest() {
+  test("Test generate random integer list", () {
+    for (int i = 0; i < 100; i++) {
+      var randomIntList = RandomUtil.randomIntList(0, 10, 5);
+      print('randomIntList:$randomIntList');
+      for (var randomInt in randomIntList) {
+        expect(randomInt >= 0 && randomInt <= 10, true);
+      }
+    }
+  });
 }
 
 /// 测试[RandomUtil.randomInt]
