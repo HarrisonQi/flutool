@@ -3,6 +3,7 @@ description: Core module of flutool
 version: 0.0.1-alpha.1
 homepage: https://github.com/HarrisonQi/flutool
 issue_tracker: https://github.com/HarrisonQi/flutool/issues
+publish_to: pub.dev
 
 environment:
   sdk: ">=2.7.0 <3.0.0"
