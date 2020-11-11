@@ -1,4 +1,4 @@
-## [0.0.1-alpha.1] - 2020-11-11
+## [0.0.1-alpha.1](https://pub.dev/packages/flutool_core/versions/0.0.1-alpha.1) - 2020-11-11
 
 * This is the first version of flutool-core!
 * include:
