@@ -1,11 +1,16 @@
+import 'clipboard_util_test.dart';
+import 'color_util_test.dart';
 import 'number_util_test.dart';
 import 'random_util_test.dart';
 import 'str_util_test.dart';
 
 void main() {
+
   strUtilTest();
 
   randomUtilTest();
 
   numberUtilTest();
+
+  colorUtilTest();
 }

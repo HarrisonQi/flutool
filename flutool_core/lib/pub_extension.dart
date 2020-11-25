@@ -1,3 +1,6 @@
+import 'dart:ui';
+
+import 'package:flutool_core/util/color_util.dart';
 import 'package:flutool_core/util/number_util.dart';
 import 'package:flutool_core/util/random_util.dart';
 import 'package:flutool_core/util/str_util.dart';
@@ -17,6 +20,9 @@ extension StringExtension on String {
 
   /// 字符串转为DateTime
   DateTime get toDateTime => StrUtil.toDateTime(this);
+
+  /// 字符串转为Color对象
+  Color get toColor => ColorUtil.fromHex(this);
 }
 
 extension IntegerExtension on int {
