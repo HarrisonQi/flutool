@@ -10,4 +10,10 @@ class DateTimeUtil {
   /// 获取某日期的结束时间
   static DateTime endOfDay(DateTime dateTime) => DateTime(
       dateTime.year, dateTime.month, dateTime.day, 23, 59, 59, 999, 999);
+
+  /// Get the same time yesterday
+  /// 获取昨天的同一时间
+  static DateTime yesterday(DateTime dateTime) {
+    return dateTime.add(Duration(days: -1));
+  }
 }
