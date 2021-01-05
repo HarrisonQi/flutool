@@ -13,6 +13,8 @@ void dateTimeUtilTest() {
   yesterday();
 
   tomorrow();
+
+  lastWeek();
 }
 
 void beginOfDayTest() {
@@ -52,5 +54,15 @@ void tomorrow(){
 
     expect(DateTimeUtil.tomorrow(DateTime.parse("2028-02-29 22:30:30")),
         DateTime.parse("2028-03-01 22:30:30"));
+  });
+}
+
+void lastWeek(){
+  test("Test get lastWeek", (){
+    expect(DateTimeUtil.lastWeek(DateTime.parse("2028-10-09 09:30:30")),
+        DateTime.parse("2028-10-02 09:30:30"));
+
+    expect(DateTimeUtil.lastWeek(DateTime.parse("2028-03-01 22:30:30")),
+        DateTime.parse("2028-02-23 22:30:30"));
   });
 }
