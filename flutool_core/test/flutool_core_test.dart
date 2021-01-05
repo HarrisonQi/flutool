@@ -1,11 +1,10 @@
-import 'clipboard_util_test.dart';
-import 'color_util_test.dart';
-import 'number_util_test.dart';
-import 'random_util_test.dart';
-import 'str_util_test.dart';
+import 'util/color_util_test.dart';
+import 'util/date_time_util_test.dart';
+import 'util/number_util_test.dart';
+import 'util/random_util_test.dart';
+import 'util/str_util_test.dart';
 
 void main() {
-
   strUtilTest();
 
   randomUtilTest();
@@ -13,4 +12,6 @@ void main() {
   numberUtilTest();
 
   colorUtilTest();
+
+  dateTimeUtilTest();
 }
