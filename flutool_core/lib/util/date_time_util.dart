@@ -25,4 +25,9 @@ class DateTimeUtil {
   /// 获取上周的同一天的同一时间 (比如今天是周三, 可通过此函数获取上周三)
   static DateTime lastWeek(DateTime dateTime) =>
       dateTime.add(Duration(days: -7));
+
+  /// Get the same `date of week` and time of next week (For example, today is Wednesday, you can get next Wednesday through this function)
+  /// 获取下周的同一天的同一时间 (比如今天是周三, 可通过此函数获取下周三)
+  static DateTime nextWeek(DateTime dateTime) =>
+      dateTime.add(Duration(days: 7));
 }

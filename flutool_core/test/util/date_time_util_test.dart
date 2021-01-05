@@ -15,6 +15,8 @@ void dateTimeUtilTest() {
   tomorrow();
 
   lastWeek();
+
+  nextWeek();
 }
 
 void beginOfDayTest() {
@@ -58,11 +60,21 @@ void tomorrow(){
 }
 
 void lastWeek(){
-  test("Test get lastWeek", (){
+  test("Test get last week", (){
     expect(DateTimeUtil.lastWeek(DateTime.parse("2028-10-09 09:30:30")),
         DateTime.parse("2028-10-02 09:30:30"));
 
     expect(DateTimeUtil.lastWeek(DateTime.parse("2028-03-01 22:30:30")),
         DateTime.parse("2028-02-23 22:30:30"));
+  });
+}
+
+void nextWeek(){
+  test("Test get next week", (){
+    expect(DateTimeUtil.nextWeek(DateTime.parse("2028-10-02 09:30:30")),
+        DateTime.parse("2028-10-09 09:30:30"));
+
+    expect(DateTimeUtil.nextWeek(DateTime.parse("2028-02-23 22:30:30")),
+        DateTime.parse("2028-03-01 22:30:30"));
   });
 }
