@@ -2,6 +2,8 @@
 
 A set of tools that keep dart/flutter sweet.
 
+为Flutter定制的一组超实用的工具类
+
 ## Getting Started
 
 This project is a starting point for a Dart
