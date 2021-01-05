@@ -11,6 +11,8 @@ void dateTimeUtilTest() {
   endOfDayTest();
 
   yesterday();
+
+  tomorrow();
 }
 
 void beginOfDayTest() {
@@ -40,5 +42,15 @@ void yesterday(){
 
     expect(DateTimeUtil.yesterday(DateTime.parse("2028-03-01 22:30:30")),
         DateTime.parse("2028-02-29 22:30:30"));
+  });
+}
+
+void tomorrow(){
+  test("Test get tomorrow", (){
+    expect(DateTimeUtil.tomorrow(DateTime.parse("2028-10-09 09:30:30")),
+        DateTime.parse("2028-10-10 09:30:30"));
+
+    expect(DateTimeUtil.tomorrow(DateTime.parse("2028-02-29 22:30:30")),
+        DateTime.parse("2028-03-01 22:30:30"));
   });
 }

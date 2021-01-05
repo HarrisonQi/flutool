@@ -13,7 +13,11 @@ class DateTimeUtil {
 
   /// Get the same time yesterday
   /// 获取昨天的同一时间
-  static DateTime yesterday(DateTime dateTime) {
-    return dateTime.add(Duration(days: -1));
-  }
+  static DateTime yesterday(DateTime dateTime) =>
+      dateTime.add(Duration(days: -1));
+
+  /// Get the same time tomorrow
+  /// 获取明天的同一时间
+  static DateTime tomorrow(DateTime dateTime) =>
+      dateTime.add(Duration(days: 1));
 }
