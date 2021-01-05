@@ -1,4 +1,4 @@
-# flutool
+# flutool [![Pub version](https://img.shields.io/pub/v/flutool_core.svg?style=popout&include_prereleases)](https://pub.dev/packages/flutool_core)
 
 A set of tools that keep dart/flutter sweet.
 
